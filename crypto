@@ -1,0 +1,23 @@
+#!/bin/bash
+
+for fname in $(ls)
+do
+
+if [[ -x "$fname" ]]
+then
+continue
+fi
+
+comand="gpg --output out/$fname.gpg --encrypt --recipient neya1969@gmail.com --recipient vovan@gmail.com $fname"
+`$comand`
+#echo $comand
+echo "out/$fname".gpg >> log/logi.txt
+echo "out/$fname.gpg"
+
+comand="rm $fname"
+`$comand`
+
+
+done
+
+echo "end"

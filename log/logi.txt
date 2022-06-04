@@ -1,0 +1,4 @@
+out/f1.gpg
+out/f2.gpg
+out/f3.gpg
+out/u.gpg
